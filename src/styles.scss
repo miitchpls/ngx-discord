@@ -1,3 +1,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  sidebar-icon.selected {
+    button {
+      @apply rounded-xl;
+    }
+  }
+  sidebar-icon.primary {
+    button {
+      @apply bg-gray-800 hover:bg-primary;
+    }
+  }
+
+  sidebar-icon.primary.selected {
+    button {
+      @apply bg-primary;
+    }
+  }
+
+  sidebar-icon.secondary {
+    button {
+      @apply bg-gray-800 text-green-500 hover:bg-green-500 hover:text-white;
+    }
+  }
+
+  sidebar-icon.secondary.selected {
+    button {
+      @apply bg-green-500 text-white;
+    }
+  }
+}

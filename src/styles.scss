@@ -5,7 +5,10 @@
 @layer components {
   sidebar-icon.selected {
     button {
-      @apply rounded-xl;
+      @apply rounded-2xl;
+    }
+    span {
+      @apply h-10 #{!important};
     }
   }
   sidebar-icon.primary {

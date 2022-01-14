@@ -2,11 +2,15 @@
   {
     "id": "508357248330760243",
     "name": "typescript",
-    "propic": "https://www.miitchpls.it/assets/typescript.webp"
+    "propic": "https://www.miitchpls.it/assets/typescript.webp",
+    "hasUnreadedChats": true,
+    "hasMentions": true
   },
   {
     "id": "748677963142135818",
     "name": "angular",
-    "propic": "https://www.miitchpls.it/assets/angular.webp"
+    "propic": "https://www.miitchpls.it/assets/angular.webp",
+    "hasUnreadedChats": true,
+    "hasMentions": false
   }
 ]

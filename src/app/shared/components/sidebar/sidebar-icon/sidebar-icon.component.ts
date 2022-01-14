@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Channel } from 'src/app/shared/interfaces/channel.interface';
 
 @Component({
   selector: 'sidebar-icon',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./sidebar-icon.component.scss'],
 })
 export class SidebarIconComponent {
+  @Input() channel: Channel;
   constructor() {}
 }

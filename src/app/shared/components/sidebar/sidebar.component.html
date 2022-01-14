@@ -1,5 +1,5 @@
 <ul
-  class="sidebar fixed top-0 left-0 m-0 p-0 w-[72px] h-screen overflow-auto pt-3 flex flex-col items-center space-y-2 bg-gray-900 text-white shadow"
+  class="sidebar fixed top-0 left-0 m-0 p-0 w-[72px] h-screen overflow-auto pt-3 flex flex-col space-y-2 bg-gray-900 text-white shadow"
 >
   <sidebar-icon
     class="primary"
@@ -15,6 +15,7 @@
     <sidebar-icon
       [ngClass]="{ selected: activeChannel == item.id }"
       (click)="goToChannel(item?.id)"
+      [channel]="item"
     >
       <img [src]="item?.propic" [alt]="item?.name || ''" />
     </sidebar-icon>

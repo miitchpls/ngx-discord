@@ -2,36 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  sidebar-icon.selected {
-    button {
-      @apply rounded-2xl;
-    }
-    span {
-      @apply h-10 #{!important};
-    }
-  }
-  sidebar-icon.primary {
-    button {
-      @apply bg-gray-800 hover:bg-primary;
-    }
-  }
+@font-face {
+  font-family: "Whitney";
+  src: url(assets/fonts/whitney/whitneymedium.woff2);
+}
 
-  sidebar-icon.primary.selected {
-    button {
-      @apply bg-primary;
-    }
-  }
-
-  sidebar-icon.secondary {
-    button {
-      @apply bg-gray-800 text-green-500 hover:bg-green-500 hover:text-white;
-    }
-  }
-
-  sidebar-icon.secondary.selected {
-    button {
-      @apply bg-green-500 text-white;
-    }
-  }
+body {
+  font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }

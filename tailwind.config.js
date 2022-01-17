@@ -5,6 +5,8 @@ module.exports = {
       colors: {
         primary: "#5865f2",
         secondary: "#3ba55d",
+        success: "hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%)",
+        danger: "hsl(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%)",
         gray: {
           900: "#202225",
           800: "#2f3136",

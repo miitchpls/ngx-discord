@@ -1,0 +1,31 @@
+:host(.selected) {
+  button {
+    @apply rounded-2xl;
+  }
+  span.unreaded-chat-pin {
+    // @apply h-10 #{!important};
+    @apply h-10;
+  }
+}
+
+:host(.primary) {
+  button {
+    @apply bg-gray-800 hover:bg-primary;
+  }
+  &.selected {
+    button {
+      @apply bg-primary;
+    }
+  }
+}
+
+:host(.secondary) {
+  button {
+    @apply bg-gray-800 text-green-500 hover:bg-green-500 hover:text-white;
+  }
+  &.selected {
+    button {
+      @apply bg-green-500 text-white;
+    }
+  }
+}

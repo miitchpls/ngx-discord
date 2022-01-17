@@ -3,5 +3,5 @@ export interface Channel {
   name: string;
   propic?: string;
   hasUnreadedChats?: boolean;
-  hasMentions?: boolean;
+  mentions?: number;
 }

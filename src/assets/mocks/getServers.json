@@ -4,13 +4,20 @@
     "name": "typescript",
     "propic": "https://www.miitchpls.it/assets/typescript.webp",
     "hasUnreadedChats": true,
-    "hasMentions": true
+    "mentions": 34
   },
   {
     "id": "748677963142135818",
     "name": "angular",
     "propic": "https://www.miitchpls.it/assets/angular.webp",
     "hasUnreadedChats": true,
-    "hasMentions": false
+    "mentions": 34
+  },
+  {
+    "id": "850034746124926976",
+    "name": "Hayota",
+    "propic": "https://cdn.discordapp.com/icons/850034746124926976/a_2d1daa3a449df2e4b490e1331896922c.webp?size=480",
+    "hasUnreadedChats": true,
+    "mentions": 1
   }
 ]

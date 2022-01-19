@@ -37,7 +37,7 @@
   [cdkConnectedOverlayPositions]="tooltipOverlayPositions"
 >
   <div *ngIf="channel?.name" class="tooltip">
-    <triangle-left-icon [width]="12" [height]="12"></triangle-left-icon>
+    <mat-icon svgIcon="triangle-left" class="tail"></mat-icon>
     <span>{{ channel?.name }}</span>
   </div>
 </ng-template>

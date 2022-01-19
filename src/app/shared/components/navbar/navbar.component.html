@@ -4,7 +4,7 @@
     [ngClass]="{ selected: isSelected('@me') }"
     (click)="goToChannel('@me')"
   >
-    <discord-icon></discord-icon>
+    <mat-icon svgIcon="discord" class="logo"></mat-icon>
   </navbar-icon>
 
   <hr />
@@ -20,16 +20,16 @@
   </ng-container>
 
   <navbar-icon class="secondary">
-    <add-icon></add-icon>
+    <mat-icon svgIcon="add"></mat-icon>
   </navbar-icon>
   <navbar-icon class="secondary">
-    <compass-icon></compass-icon>
+    <mat-icon svgIcon="compass"></mat-icon>
   </navbar-icon>
 
   <hr />
 
   <navbar-icon class="secondary">
-    <download-icon></download-icon>
+    <mat-icon svgIcon="download"></mat-icon>
   </navbar-icon>
 </ul>
 

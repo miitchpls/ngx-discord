@@ -2,11 +2,11 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { IconsModule } from '../icons/icons.module';
 import { NavbarIconModule } from './navbar-icon/navbar-icon.module';
-import { SidebarComponent } from './sidebar.component';
+import { NavbarComponent } from './navbar.component';
 
 @NgModule({
-  declarations: [SidebarComponent],
+  declarations: [NavbarComponent],
   imports: [CommonModule, NavbarIconModule, IconsModule],
-  exports: [SidebarComponent],
+  exports: [NavbarComponent],
 })
-export class SidebarModule {}
+export class NavbarModule {}

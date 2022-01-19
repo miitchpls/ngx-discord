@@ -4,15 +4,15 @@ import { Channel } from '../../interfaces/channel.interface';
 import { ChannelsService } from '../../services/channels/channels.service';
 
 @Component({
-  selector: 'sidebar',
-  templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.scss'],
+  selector: 'navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.scss'],
 })
-export class SidebarComponent {
+export class NavbarComponent {
   // param "channel" retrieved from the url
   public activeChannel: string | null;
 
-  // list of server to display in the sidebar
+  // list of server to display in the navbar
   public servers: Channel[] = [];
 
   constructor(

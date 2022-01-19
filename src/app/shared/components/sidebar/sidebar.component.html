@@ -14,7 +14,7 @@
   <ng-container *ngFor="let item of servers">
     <sidebar-icon
       [ngClass]="{ selected: activeChannel == item.id }"
-      (click)="goToChannel(item?.id)"
+      (click)="goToChannel(item.id)"
       [channel]="item"
     >
       <img [src]="item?.propic" [alt]="item?.name || ''" />

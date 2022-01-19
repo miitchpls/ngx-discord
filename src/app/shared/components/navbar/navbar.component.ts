@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Channel } from '../../interfaces/channel.interface';
@@ -18,6 +19,7 @@ export class NavbarComponent {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
+    private location: Location,
     private channelsService: ChannelsService
   ) {
     // subscribing to the url for catch changes and update the channel param
@@ -28,6 +30,23 @@ export class NavbarComponent {
   }
 
   /**
+   * Navigate to the specific channel of the given id
+   * @param channelID the id of the channel to navigate to
+   */
+  public goToChannel(channelID: string): void {
+    this.router.navigate(['channels', channelID]);
+  }
+
+  /**
+   * Check by a channel id if is currently selected.
+   * @param channelID the id of the channel to check
+   * @returns wether the channel is selected or not
+   */
+  public isSelected(channelID: string): boolean {
+    return RegExp(`channels/${channelID}`).test(this.location.path());
+  }
+
+  /**
    * Retrieves from API the list of servers to display
    */
   private getServers(): void {
@@ -35,13 +54,5 @@ export class NavbarComponent {
       if (!data) return;
       this.servers = data;
     });
-  }
-
-  /**
-   * Navigate to the specific channel of the given id.
-   * @param channelID the id of the channel to navigate to
-   */
-  public goToChannel(channelID: string): void {
-    this.router.navigate(['channels', channelID]);
   }
 }

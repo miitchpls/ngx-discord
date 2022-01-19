@@ -1,6 +1,6 @@
-import { Injectable, Input } from '@angular/core';
+import { Directive, Input } from '@angular/core';
 
-@Injectable()
+@Directive()
 export abstract class IconComponent {
   @Input() width: number = 28;
   @Input() height: number = 28;

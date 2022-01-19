@@ -1,26 +1,43 @@
-<div class="relative flex justify-center group">
+<div
+  class="relative flex justify-center select-none"
+  cdkOverlayOrigin
+  #trigger="cdkOverlayOrigin"
+>
   <div
     *ngIf="channel?.hasUnreadedChats"
     class="absolute inset-y-0 left-[-4px] w-2 flex items-center"
   >
     <span
-      class="unreaded-chat-pin w-2 h-2 rounded-full bg-white group-hover:h-5 transition-all duration-200 ease-linear"
+      class="unreaded-chat-pin"
+      [ngClass]="{ isHovered: isHovering }"
     ></span>
   </div>
 
   <div class="relative">
     <button
-      class="overflow-hidden h-12 w-12 rounded-3xl shadow-lg group-hover:rounded-2xl transition-all duration-200 ease-linear flex items-center justify-center"
+      class="sidebar-button"
+      [ngClass]="{ isHovered: isHovering }"
+      (mouseenter)="isHovering = true"
+      (mouseleave)="isHovering = false"
     >
       <ng-content></ng-content>
     </button>
-    <div
-      *ngIf="channel?.mentions"
-      class="absolute bottom-0 right-0 min-w-[1rem] h-4 rounded-full bg-danger flex justify-center outline outline-4 outline-gray-900"
-    >
-      <span class="text-xs font-semibold text-center px-1">
+    <div *ngIf="channel?.mentions" class="mentions-pin">
+      <span>
         {{ channel?.mentions }}
       </span>
     </div>
   </div>
 </div>
+
+<ng-template
+  cdkConnectedOverlay
+  [cdkConnectedOverlayOrigin]="trigger"
+  [cdkConnectedOverlayOpen]="isHovering"
+  [cdkConnectedOverlayPositions]="tooltipOverlayPositions"
+>
+  <div *ngIf="channel?.name" class="tooltip">
+    <triangle-left-icon [width]="12" [height]="12"></triangle-left-icon>
+    <span>{{ channel?.name }}</span>
+  </div>
+</ng-template>

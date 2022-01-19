@@ -8,9 +8,18 @@ const routes: Routes = [
     component: ModulesComponent,
     children: [
       {
-        path: '',
+        path: '@me',
         loadChildren: () =>
-          import('./channels/channels.module').then((m) => m.ChannelsModule),
+          import('./main-channel/main-channel.module').then(
+            (m) => m.MainChannelModule
+          ),
+      },
+      {
+        path: ':channel',
+        loadChildren: () =>
+          import('./server-channel/server-channel.module').then(
+            (m) => m.ServerChannelModule
+          ),
       },
     ],
   },

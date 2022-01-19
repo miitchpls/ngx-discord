@@ -10,7 +10,7 @@ const routes: Routes = [
   {
     path: 'channels',
     loadChildren: () =>
-      import('./modules/modules.module').then((m) => m.ModulesModule),
+      import('./channels/channels.module').then((m) => m.ChannelsModule),
   },
 ];
 

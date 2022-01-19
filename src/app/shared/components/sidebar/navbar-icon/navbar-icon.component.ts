@@ -3,11 +3,11 @@ import { Component, Input } from '@angular/core';
 import { Channel } from 'src/app/shared/interfaces/channel.interface';
 
 @Component({
-  selector: 'sidebar-icon',
-  templateUrl: './sidebar-icon.component.html',
-  styleUrls: ['./sidebar-icon.component.scss'],
+  selector: 'navbar-icon',
+  templateUrl: './navbar-icon.component.html',
+  styleUrls: ['./navbar-icon.component.scss'],
 })
-export class SidebarIconComponent {
+export class NavbarIconComponent {
   @Input() channel: Channel;
 
   public isHovering: boolean = false;

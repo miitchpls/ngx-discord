@@ -2,11 +2,11 @@ import { OverlayModule } from '@angular/cdk/overlay';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { IconsModule } from '../../icons/icons.module';
-import { SidebarIconComponent } from './sidebar-icon.component';
+import { NavbarIconComponent } from './navbar-icon.component';
 
 @NgModule({
-  declarations: [SidebarIconComponent],
+  declarations: [NavbarIconComponent],
   imports: [CommonModule, OverlayModule, IconsModule],
-  exports: [SidebarIconComponent],
+  exports: [NavbarIconComponent],
 })
-export class SidebarIconModule {}
+export class NavbarIconModule {}

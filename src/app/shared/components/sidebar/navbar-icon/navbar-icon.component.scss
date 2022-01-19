@@ -30,7 +30,7 @@
   }
 }
 
-.sidebar-button {
+.navbar-button {
   @apply overflow-hidden h-12 w-12 rounded-3xl shadow-lg transition-all duration-200 ease-linear flex items-center justify-center;
   &.isHovered {
     @apply rounded-2xl;

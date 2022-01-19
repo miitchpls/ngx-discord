@@ -1,36 +1,36 @@
 <ul>
-  <sidebar-icon
+  <navbar-icon
     class="primary"
     [ngClass]="{ selected: activeChannel == '@me' }"
     (click)="goToChannel('@me')"
   >
     <discord-icon></discord-icon>
-  </sidebar-icon>
+  </navbar-icon>
 
   <hr />
 
   <ng-container *ngFor="let item of servers">
-    <sidebar-icon
+    <navbar-icon
       [ngClass]="{ selected: activeChannel == item.id }"
       (click)="goToChannel(item.id)"
       [channel]="item"
     >
       <img [src]="item?.propic" [alt]="item?.name || ''" />
-    </sidebar-icon>
+    </navbar-icon>
   </ng-container>
 
-  <sidebar-icon class="secondary">
+  <navbar-icon class="secondary">
     <add-icon></add-icon>
-  </sidebar-icon>
-  <sidebar-icon class="secondary">
+  </navbar-icon>
+  <navbar-icon class="secondary">
     <compass-icon></compass-icon>
-  </sidebar-icon>
+  </navbar-icon>
 
   <hr />
 
-  <sidebar-icon class="secondary">
+  <navbar-icon class="secondary">
     <download-icon></download-icon>
-  </sidebar-icon>
+  </navbar-icon>
 </ul>
 
 <main class="ml-[72px] h-screen">

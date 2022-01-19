@@ -1,3 +1,15 @@
 .sidebar::-webkit-scrollbar {
   display: none;
 }
+
+ul {
+  @apply fixed top-0 left-0 m-0 p-0 w-[72px] h-screen overflow-auto pt-3 flex items-center flex-col space-y-2 bg-gray-900 text-white shadow;
+
+  sidebar-icon {
+    @apply w-full;
+  }
+
+  hr {
+    @apply w-8 bg-gray-200 dark:bg-gray-800 border border-gray-200 dark:border-gray-800 rounded-full;
+  }
+}

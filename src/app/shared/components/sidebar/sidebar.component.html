@@ -1,6 +1,4 @@
-<ul
-  class="sidebar fixed top-0 left-0 m-0 p-0 w-[72px] h-screen overflow-auto pt-3 flex flex-col space-y-2 bg-gray-900 text-white shadow"
->
+<ul>
   <sidebar-icon
     class="primary"
     [ngClass]="{ selected: activeChannel == '@me' }"
@@ -9,7 +7,7 @@
     <discord-icon></discord-icon>
   </sidebar-icon>
 
-  <sidebar-divider></sidebar-divider>
+  <hr />
 
   <ng-container *ngFor="let item of servers">
     <sidebar-icon
@@ -28,7 +26,7 @@
     <compass-icon></compass-icon>
   </sidebar-icon>
 
-  <sidebar-divider></sidebar-divider>
+  <hr />
 
   <sidebar-icon class="secondary">
     <download-icon></download-icon>

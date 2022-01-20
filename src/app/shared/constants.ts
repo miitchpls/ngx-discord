@@ -9,4 +9,8 @@ export const ICONS: string[] = [
   'muted-microphone',
   'audio',
   'muted-audio',
+  'online',
+  'idle',
+  'do-not-disturb',
+  'invisible',
 ];

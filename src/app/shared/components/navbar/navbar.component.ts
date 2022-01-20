@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Channel } from '../../interfaces/channel.interface';
 import { ChannelsService } from '../../services/channels/channels.service';
+import { MeService } from '../../services/me/me.service';
 
 @Component({
   selector: 'navbar',
@@ -17,6 +18,7 @@ export class NavbarComponent {
   public servers: Channel[] = [];
 
   constructor(
+    public meService: MeService,
     private router: Router,
     private route: ActivatedRoute,
     private location: Location,

@@ -4,9 +4,14 @@
 
 @font-face {
   font-family: "Whitney";
-  src: url(assets/fonts/whitney/whitneymedium.woff2);
+  src: url(assets/fonts/whitney/whitneylight.woff2);
 }
 
 body {
   font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+// selector for svg path
+.strikethrough {
+  @apply text-strikethrough;
 }

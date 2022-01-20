@@ -1,6 +1,5 @@
 import { ConnectedPosition } from '@angular/cdk/overlay';
 import { Component, Input } from '@angular/core';
-import { Channel } from 'src/app/shared/interfaces/channel.interface';
 
 @Component({
   selector: 'navbar-icon',
@@ -8,7 +7,9 @@ import { Channel } from 'src/app/shared/interfaces/channel.interface';
   styleUrls: ['./navbar-icon.component.scss'],
 })
 export class NavbarIconComponent {
-  @Input() channel: Channel;
+  @Input() name: string;
+  @Input() unreadedChats: boolean;
+  @Input() mentions?: number;
 
   public isHovering: boolean = false;
   public tooltipOverlayPositions: ConnectedPosition[] = [

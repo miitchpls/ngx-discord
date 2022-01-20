@@ -1,0 +1,25 @@
+section {
+  @apply w-full h-[52px] bg-secondary-alt px-2 mb-px flex items-center;
+
+  .info-wrapper {
+    @apply flex flex-col grow;
+    .name {
+      @apply text-sm leading-[18px] font-semibold text-header-primary;
+    }
+    .code {
+      @apply text-xs leading-[13px] text-header-secondary;
+    }
+  }
+
+  .actions-wrapper {
+    @apply flex;
+
+    button {
+      @apply w-8 h-8 rounded-[4px] text-interactive-normal hover:bg-modifier-selected hover:text-interactive-hover flex justify-center items-center;
+
+      mat-icon {
+        @apply w-5;
+      }
+    }
+  }
+}

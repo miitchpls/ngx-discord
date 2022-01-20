@@ -2,14 +2,14 @@
   {
     "id": "508357248330760243",
     "name": "TypeScript Community",
-    "propic": "https://www.miitchpls.it/assets/typescript.webp",
+    "avatar": "https://www.miitchpls.it/assets/typescript.webp",
     "hasUnreadedChats": true,
     "mentions": 0
   },
   {
     "id": "748677963142135818",
     "name": "Angular Community",
-    "propic": "https://www.miitchpls.it/assets/angular.webp",
+    "avatar": "https://www.miitchpls.it/assets/angular.webp",
     "hasUnreadedChats": true,
     "mentions": 34
   }

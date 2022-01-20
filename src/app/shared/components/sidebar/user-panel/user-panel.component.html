@@ -1,0 +1,29 @@
+<section>
+  <user-avatar
+    [avatar]="meService.me.avatar"
+    [status]="meService.me.status"
+  ></user-avatar>
+
+  <div class="info-wrapper">
+    <span class="name">{{ meService.me.name }}</span>
+    <span class="code">#{{ meService.me.code }}</span>
+  </div>
+
+  <div class="actions-wrapper">
+    <button (click)="toggleAudio()">
+      <mat-icon
+        [svgIcon]="
+          !microphoneMuted && !audioMuted ? 'microphone' : 'muted-microphone'
+        "
+      ></mat-icon>
+    </button>
+
+    <button (click)="toggleAudio(true)">
+      <mat-icon [svgIcon]="!audioMuted ? 'audio' : 'muted-audio'"></mat-icon>
+    </button>
+
+    <button>
+      <mat-icon svgIcon="settings"></mat-icon>
+    </button>
+  </div>
+</section>

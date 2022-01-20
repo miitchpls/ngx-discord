@@ -3,6 +3,7 @@
     class="primary"
     [ngClass]="{ selected: isSelected('@me') }"
     (click)="goToChannel('@me')"
+    [unreadedChats]="meService.me.hasUnreadedChats"
   >
     <mat-icon svgIcon="discord" class="logo"></mat-icon>
   </navbar-icon>
@@ -13,9 +14,11 @@
     <navbar-icon
       [ngClass]="{ selected: isSelected(item.id) }"
       (click)="goToChannel(item.id)"
-      [channel]="item"
+      [name]="item.name"
+      [unreadedChats]="item.hasUnreadedChats"
+      [mentions]="item.mentions"
     >
-      <img [src]="item?.propic" [alt]="item?.name || ''" />
+      <img [src]="item.avatar" [alt]="item?.name || ''" />
     </navbar-icon>
   </ng-container>
 

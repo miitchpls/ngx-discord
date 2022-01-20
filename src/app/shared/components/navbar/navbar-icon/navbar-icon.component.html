@@ -4,7 +4,7 @@
   #trigger="cdkOverlayOrigin"
 >
   <div
-    *ngIf="channel?.hasUnreadedChats"
+    *ngIf="unreadedChats"
     class="absolute inset-y-0 left-[-4px] w-2 flex items-center"
   >
     <span
@@ -22,9 +22,9 @@
     >
       <ng-content></ng-content>
     </button>
-    <div *ngIf="channel?.mentions" class="mentions-pin">
+    <div *ngIf="mentions" class="mentions-pin">
       <span>
-        {{ channel?.mentions }}
+        {{ mentions }}
       </span>
     </div>
   </div>
@@ -36,8 +36,8 @@
   [cdkConnectedOverlayOpen]="isHovering"
   [cdkConnectedOverlayPositions]="tooltipOverlayPositions"
 >
-  <div *ngIf="channel?.name" class="tooltip">
+  <div *ngIf="name" class="tooltip">
     <mat-icon svgIcon="triangle-left" class="tail"></mat-icon>
-    <span>{{ channel?.name }}</span>
+    <span>{{ name }}</span>
   </div>
 </ng-template>

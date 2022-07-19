@@ -10,7 +10,7 @@ export class ChannelsService {
   constructor(private httpClient: HttpClient) {}
 
   public getServers(): Observable<Channel[]> {
-    const url: string = 'assets/mocks/getServers.json';
+    const url: string = 'http://localhost:8080/api/getServers';
     return this.httpClient.get<any>(url, { responseType: 'json' });
   }
 }

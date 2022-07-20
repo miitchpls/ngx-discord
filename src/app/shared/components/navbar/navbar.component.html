@@ -1,8 +1,8 @@
 <ul>
   <navbar-icon
     class="primary"
-    [ngClass]="{ selected: isSelected('@me') }"
-    (click)="goToChannel('@me')"
+    [ngClass]="{ selected: isSelected(Paths.me) }"
+    (click)="goToChannel(Paths.me)"
     [unreadedChats]="meService.me.hasUnreadedChats"
   >
     <mat-icon svgIcon="discord" class="logo"></mat-icon>

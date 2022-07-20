@@ -1,6 +1,8 @@
 import { Location } from '@angular/common';
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { PathsParams } from '../../enums/paths-params.enum';
+import { Paths } from '../../enums/paths.enum';
 import { Channel } from '../../interfaces/channel.interface';
 import { ChannelsService } from '../../services/channels/channels.service';
 import { MeService } from '../../services/me/me.service';
@@ -17,6 +19,9 @@ export class NavbarComponent {
   // list of server to display in the navbar
   public servers: Channel[] = [];
 
+  // declaring enum for template use
+  public Paths = Paths;
+
   constructor(
     public meService: MeService,
     private router: Router,
@@ -26,7 +31,7 @@ export class NavbarComponent {
   ) {
     // subscribing to the url for catch changes and update the channel param
     this.route.paramMap.subscribe((params) => {
-      this.activeChannel = params.get('channel');
+      this.activeChannel = params.get(PathsParams.channel);
     });
     this.getServers();
   }
@@ -36,7 +41,7 @@ export class NavbarComponent {
    * @param channelID the id of the channel to navigate to
    */
   public goToChannel(channelID: string): void {
-    this.router.navigate(['channels', channelID]);
+    this.router.navigate([Paths.channels, channelID]);
   }
 
   /**
@@ -45,7 +50,7 @@ export class NavbarComponent {
    * @returns wether the channel is selected or not
    */
   public isSelected(channelID: string): boolean {
-    return RegExp(`channels/${channelID}`).test(this.location.path());
+    return RegExp(`${Paths.channels}/${channelID}`).test(this.location.path());
   }
 
   /**

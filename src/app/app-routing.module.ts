@@ -1,24 +1,26 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PathsParams } from './shared/enums/paths-params.enum';
+import { Paths } from './shared/enums/paths.enum';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'channels/@me',
+    redirectTo: `${Paths.channels}/${Paths.me}`,
     pathMatch: 'full',
   },
   {
-    path: 'channels',
+    path: Paths.channels,
     children: [
       {
-        path: '@me',
+        path: Paths.me,
         loadChildren: () =>
           import('./views/main-channel/main-channel.module').then(
             (m) => m.MainChannelModule
           ),
       },
       {
-        path: ':channel',
+        path: `:${PathsParams.channel}`,
         loadChildren: () =>
           import('./views/server-channel/server-channel.module').then(
             (m) => m.ServerChannelModule

@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
+import { localConfig } from '../../configurations/local.config';
 import { ICONS, ICONS_PATH } from '../../constants';
-import { Config } from '../../models/config.interface';
+import { Config } from '../../interfaces/config.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -14,7 +15,7 @@ export class ConfigurationService {
   ) {}
 
   public get config(): Config {
-    return {};
+    return localConfig;
   }
 
   /**

@@ -1,3 +1,4 @@
+export const ICONS_PATH: string = 'assets/icons/';
 export const ICONS: string[] = [
   'add',
   'compass',

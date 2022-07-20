@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Me } from './shared/interfaces/me.interface';
-import { IconRegistryService } from './shared/services/icon-registry/icon-registry.service';
+import { ConfigurationService } from './shared/services/configuration/configuration.service';
 import { MeService } from './shared/services/me/me.service';
 
 @Component({
@@ -10,10 +10,10 @@ import { MeService } from './shared/services/me/me.service';
 })
 export class AppComponent {
   constructor(
-    private iconRegistryService: IconRegistryService,
+    private configurationService: ConfigurationService,
     private meService: MeService
   ) {
-    this.iconRegistryService.initializeIcons();
+    this.configurationService.initializeIcons();
     this.meService.getMe().subscribe((me: Me) => {
       this.meService.me = me;
     });

@@ -1,0 +1,8 @@
+section {
+  @apply h-12 px-[10px] flex items-center shadow-elevation-low;
+
+  button {
+    // TODO non abbastanza font 500
+    @apply w-full rounded-[4px] px-[6px] py-px bg-background-tertiary text-text-muted text-sm leading-6 tracking-wide font-semibold text-left;
+  }
+}

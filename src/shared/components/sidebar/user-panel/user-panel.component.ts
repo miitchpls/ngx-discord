@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MeService } from 'src/app/shared/services/me/me.service';
+import { MeService } from 'src/shared/services/me/me.service';
 
 @Component({
   selector: 'user-panel',

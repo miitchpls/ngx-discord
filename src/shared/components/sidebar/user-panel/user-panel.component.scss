@@ -1,7 +1,11 @@
 section {
   @apply w-full h-[52px] bg-secondary-alt px-2 mb-px flex items-center;
 
-  .info-wrapper {
+  user-avatar {
+    @apply mr-2;
+  }
+
+  .info {
     @apply flex flex-col grow;
     .name {
       @apply text-sm leading-[18px] font-semibold text-header-primary;
@@ -11,7 +15,7 @@ section {
     }
   }
 
-  .actions-wrapper {
+  .actions {
     @apply flex;
 
     button {

@@ -10,7 +10,7 @@ const getServers = require("./mocks/getServers.json");
 router
   .use(cors({ credentials: true, origin: "http://localhost:4200" }))
   .get("/", (req, res) => res.send("Server working!"))
-  .get("/getMe", (req, res) => res.json(getMe))
+  .get("/getMe", (req, res) => setTimeout(() => res.json(getMe), 2500))
   .get("/getServers", (req, res) => res.json(getServers));
 
 module.exports = router;

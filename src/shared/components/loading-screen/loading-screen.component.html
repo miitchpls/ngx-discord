@@ -1,0 +1,16 @@
+<div class="loading-screen">
+  <video
+    #video
+    width="320"
+    height="240"
+    loop
+    muted
+    autoplay
+    (canplay)="video.play()"
+    (loadedmetadata)="video.muted = true"
+    playsinline
+  >
+    <source src="assets/img/loadingScreen.webm" type="video/webm" />
+    <source src="assets/img/loadingScreen.mp4" type="video/mp4" />
+  </video>
+</div>

@@ -1,3 +1,9 @@
-<navbar>
-  <router-outlet></router-outlet>
-</navbar>
+<ng-container *ngIf="loaded; else loadingScreen">
+  <navbar>
+    <router-outlet></router-outlet>
+  </navbar>
+</ng-container>
+
+<ng-template #loadingScreen>
+  <loading-screen></loading-screen>
+</ng-template>

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PathsParams } from './shared/enums/paths-params.enum';
-import { Paths } from './shared/enums/paths.enum';
+import { PathsParams } from 'src/shared/enums/paths-params.enum';
+import { Paths } from 'src/shared/enums/paths.enum';
 
 const routes: Routes = [
   {

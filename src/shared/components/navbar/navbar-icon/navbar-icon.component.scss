@@ -45,7 +45,7 @@
 }
 
 .mentions-pin {
-  @apply absolute bottom-0 right-0 min-w-[1rem] h-4 rounded-full bg-danger flex justify-center outline outline-4 outline-gray-900;
+  @apply absolute bottom-0 right-0 min-w-[1rem] h-4 rounded-full bg-danger flex justify-center outline outline-4 outline-tertiary;
   span {
     @apply text-xs font-semibold text-center px-1;
   }

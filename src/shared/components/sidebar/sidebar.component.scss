@@ -1,0 +1,22 @@
+.sidebar {
+  @apply fixed w-60 h-screen bg-background-secondary shadow flex flex-col justify-between;
+
+  main {
+    @apply text-channels-default mr-[10px];
+
+    h2 {
+      @apply pt-4 pr-2 pb-1 pl-4  text-xs font-semibold;
+    }
+
+    li a {
+      @apply flex items-center justify-between ml-2 h-[42px] rounded hover:text-interactive-hover hover:bg-background-modifier-hover;
+
+      .info {
+        @apply flex items-center px-2;
+        user-avatar {
+          @apply mr-3;
+        }
+      }
+    }
+  }
+}

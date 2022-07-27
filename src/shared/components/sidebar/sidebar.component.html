@@ -1,0 +1,23 @@
+<div class="sidebar">
+  <main>
+    <searchbar-panel></searchbar-panel>
+
+    <h2>{{ "direct_messages" | translate | uppercase }}</h2>
+    <ul>
+      <li>
+        <a href="">
+          <div class="info">
+            <user-avatar
+              [avatar]="meService.me.avatar"
+              [status]="meService.me.status"
+            ></user-avatar>
+            <span>Michele</span>
+          </div>
+        </a>
+      </li>
+      <!-- <li></li> -->
+    </ul>
+  </main>
+
+  <user-panel></user-panel>
+</div>

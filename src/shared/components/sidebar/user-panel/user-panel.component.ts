@@ -9,6 +9,7 @@ import { MeService } from 'src/shared/services/me/me.service';
 export class UserPanelComponent {
   public microphoneMuted: boolean = false;
   public audioMuted: boolean = false;
+  private audio = new Audio('assets/effects/mute.wav');
 
   constructor(public meService: MeService) {}
 
@@ -30,9 +31,7 @@ export class UserPanelComponent {
       this.microphoneMuted = !this.microphoneMuted;
     }
     //TODO manage sound effect - below just a try
-    const audio = new Audio();
-    audio.src = 'assets/effects/mute.wav';
-    audio.load();
-    audio.play();
+    this.audio.load();
+    this.audio.play();
   }
 }

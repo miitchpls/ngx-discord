@@ -1,10 +1,7 @@
-import { UserStatus } from '../enums/user-status.enum';
+import { DirectMessage } from './direct-message.interface';
+import { User } from './user.interface';
 
-export interface Me {
-  id: string;
-  name: string;
-  code: string;
-  avatar: string;
+export interface Me extends User {
   hasUnreadedChats: boolean;
-  status: UserStatus;
+  directMessages: Array<DirectMessage>;
 }

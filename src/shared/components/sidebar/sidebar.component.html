@@ -4,14 +4,14 @@
 
     <h2>{{ "direct_messages" | translate | uppercase }}</h2>
     <ul>
-      <li>
+      <li *ngFor="let item of meService.me.directMessages">
         <a href="">
           <div class="info">
             <user-avatar
-              [avatar]="meService.me.avatar"
-              [status]="meService.me.status"
+              [avatar]="item.avatar"
+              [status]="item.status"
             ></user-avatar>
-            <span>Michele</span>
+            <span>{{ item.name }}</span>
           </div>
         </a>
       </li>

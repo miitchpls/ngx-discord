@@ -2,7 +2,7 @@
   "id": "930556186581942331",
   "name": "Michele",
   "code": "4367",
-  "avatar": "https://www.miitchpls.it/assets/me.webp",
+  "avatar": "http://localhost:8080/assets/me.webp",
   "hasUnreadedChats": true,
   "status": 0,
   "directMessages": [
@@ -10,14 +10,14 @@
       "id": "535915740918972428",
       "name": "V1r0n",
       "code": "8056",
-      "avatar": "https://www.miitchpls.it/assets/v1r0n.webp",
+      "avatar": "http://localhost:8080/assets/v1r0n.webp",
       "status": 1
     },
     {
       "id": "930556186581942333",
       "name": "babiofiffi",
       "code": "7261",
-      "avatar": "https://www.miitchpls.it/assets/babiofiffi.webp",
+      "avatar": "http://localhost:8080/assets/babiofiffi.webp",
       "status": 2
     }
   ]
